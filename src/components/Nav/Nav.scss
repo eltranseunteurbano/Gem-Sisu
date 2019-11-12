@@ -1,0 +1,55 @@
+@import '../../styles/colors.scss';
+.Nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+
+    &__Logo{
+        a{
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 20px;
+            color: $yellow;
+        }
+    }
+
+    &__icons{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        svg{
+            cursor: pointer;
+            fill: $black;
+            stroke: $black;
+            transition: all .4s
+        }
+
+        svg:hover{
+            fill: $white;
+            stroke: $white;
+        }
+
+        &__bar{
+            color: $black;
+            transition: all .4s;
+            font-size: 20px;
+            margin: 0 20px;
+        }
+
+        &__bar:hover{
+            color: $white;
+        }
+
+
+    }
+}
