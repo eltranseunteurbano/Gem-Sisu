@@ -7,6 +7,7 @@ import * as routes from './constants/Routes';
 
 import Nav from './components/Nav/Nav';
 import Home from './containers/home/Home';
+import Contacto from './containers/contacto/Contacto';
 import Menu from './components/menu/Menu';
 
 const App = () => {
@@ -17,9 +18,10 @@ const App = () => {
     <div className="App">
       <Router>
         <Nav showMenu={showMenu} setMenu={setShowMenu}/>
-        <Menu showMenu={showMenu} />
+        <Menu showMenu={showMenu} setMenu={setShowMenu}/>
         <Switch>
-          <Route exact path={routes.HOME} > < Home menu={showMenu} /> </Route>
+          <Route exact path={routes.HOME} > < Home /> </Route>
+          <Route exact path={routes.CONTACT} > < Contacto /> </Route>
         </Switch>
       </Router>
     </div>
