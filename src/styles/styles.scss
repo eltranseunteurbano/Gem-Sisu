@@ -1,0 +1,33 @@
+.appear {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
+
+.appearMenu {
+    animation-name: appearMenu;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes appearMenu {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

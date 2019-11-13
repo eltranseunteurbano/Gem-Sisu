@@ -1,0 +1,92 @@
+@import '../../styles/colors.scss';
+
+.Menu{
+    background: $black;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    &__user{
+        cursor: pointer;
+        margin-bottom: 70px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        &__icon{
+            width: 80px;
+            height: 80px;
+            background: $blue;
+            border-radius: 80px;
+            transition: all .4s;
+            margin-bottom: 20px;
+        }
+
+        &__text{
+            color: $blue;
+            font-size: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        &__item {
+            color: $white;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 40px;
+            transition: all .4s;
+            position: relative;
+            z-index: 3;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+
+        a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: $yellow;
+            visibility: hidden;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: .25s all ease-in-out;
+        }
+
+        a:hover {
+            color: $yellow;
+        }
+
+        a:hover:before,
+        a:focus:before {
+            transform: scaleX(1);
+            visibility: visible;
+        }
+    }
+}
+
+.Menu-mostrar{
+    display: flex;
+}
