@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
     return(
-        <section className="Home">
+        <section className="Home appear">
             <article className="Home__white">
                 <div className="Home__white__icons">
                     <Link to="" className="Home__white__icons__icon"><FontAwesomeIcon icon={ faFacebookF }/></Link>
