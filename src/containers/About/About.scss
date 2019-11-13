@@ -1,0 +1,63 @@
+@import '../../styles/colors.scss';
+.About{
+    background: #f1f1f3;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    &__left{
+        padding-left: 120px;
+        color: $black;
+        &__title{
+            font-size: 72px;
+            line-height: 84px;
+            margin-bottom: 30px;
+            strong{
+                color: $yellow;
+            }
+        }
+        &__desc{
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+
+        &__text{
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 15px;
+            width: 60%;
+        }
+
+        &__btn{
+            background: #F79F00;
+            border: 3px solid $yellow;
+            box-sizing: border-box;
+            color: $white;
+            width: 150px;
+            height: 40px;
+            display: block;
+            transition: all .4s;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        &__btn:hover{
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__right{
+        width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top right;
+    }
+}
