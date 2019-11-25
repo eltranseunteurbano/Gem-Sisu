@@ -1,0 +1,27 @@
+{
+    "necklaces":[
+        {
+            "id": 1,
+            "nombre": "",
+            "precio": 200000,
+            "likes": 15
+        }
+    ],
+
+    "bracelets":[
+        {
+            "id": 1,
+            "nombre": "",
+            "precio": 200000,
+            "likes": 10
+        }
+    ],
+    "keychains":[
+        {
+            "id": 1,
+            "nombre": "",
+            "precio": 200000,
+            "likes": 5
+        }
+    ]
+}

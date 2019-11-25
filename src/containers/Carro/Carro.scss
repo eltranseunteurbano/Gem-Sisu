@@ -1,0 +1,90 @@
+@import '../../styles/colors.scss';
+
+.Carro{
+    width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+    padding-top: 50px;
+
+    &__titulo{
+        width: 100%;
+        padding-left: 150px;
+        margin-bottom: 50px;    
+
+        h1{
+            font-size: 60px;
+            text-align: center;
+        }
+    }
+
+    &__content{
+        width: 90%;
+        
+        &__title{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: stretch;
+            align-items: center;
+            color: $yellow;
+            box-sizing: border-box;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: solid 1px rgb(190, 190, 190);
+
+            &__nombre, &__cantidad, &__Precio, &__X{
+                width: 25%;
+            }
+        }
+
+        &__items{
+            width: 100%;
+            &__item{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-content: stretch;
+                align-items: center;
+                padding-bottom: 15px;
+                border-bottom: solid 1px rgb(190, 190, 190);
+
+                &__nombre, &__cantidad, &__precio, &__eliminar{
+                    width: 25%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-content: stretch;
+                    align-items: center;
+
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+
+                &__nombre{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-content: stretch;
+                    align-items: center;
+
+                    img{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+    }
+}

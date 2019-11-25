@@ -13,12 +13,18 @@
     z-index: 20;
 
     &__Logo{
+        padding-left: 20px; 
+        width: 120px;
         a{
             text-decoration: none;
             font-weight: bolder;
             font-size: 20px;
             color: $yellow;
             transition: all .4s;
+
+            img{
+                width: 100%;
+            }
         }
     }
 
@@ -29,11 +35,16 @@
         justify-content: center;
         align-content: center;
         align-items: center;
-        svg{
-            cursor: pointer;
-            fill: $black;
-            stroke: $black;
-            transition: all .4s
+        a{
+            text-decoration: none;
+            
+            svg{
+                cursor: pointer;
+                fill: $black;
+                stroke: $black;
+                transition: all .4s
+            }
+
         }
 
         svg:hover{
