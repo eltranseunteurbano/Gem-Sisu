@@ -1,11 +1,14 @@
 import React from 'react';
 import './About.scss';
+import NavBar from '../../components/NavBar/NavBar';
 
 const About = () => {
     const backgroundImage = {
         backgroundImage: 'url(' + process.env.PUBLIC_URL  + '/img/About.svg)'
     }
     return(
+        <>
+        <NavBar />
         <section className="About appear">
             <article className="About__left">
                 <h1 className="About__left__title">Every product <br /> with <strong> 3D printing</strong> </h1>
@@ -15,6 +18,7 @@ const About = () => {
             </article>
             <article className="About__right" style={backgroundImage}/>
         </section>
+        </>
     )
 }
 

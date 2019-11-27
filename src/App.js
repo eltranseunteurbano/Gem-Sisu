@@ -2,11 +2,9 @@ import React from 'react';
 import './styles/reset.scss';
 import './styles/styles.scss';
 
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 import * as routes from './constants/Routes';
 
-import Nav from './components/Nav/Nav';
-import Menu from './components/menu/Menu';
 import Producto from './containers/Producto/Producto';
 
 import Home from './containers/home/Home';
@@ -14,24 +12,25 @@ import Store from './containers/Store/Store';
 import About from './containers/About/About';
 import Contacto from './containers/contacto/Contacto';
 import Carro from './containers/Carro/Carro';
+import Register from './containers/Register/Register';
+import Login from './containers/Login/Login';
+import { userIsAuthenticated } from './services/firebaseService';
+import RedirectRoute from './components/RedirectRoute/RedirectRoute';
 
-
-const App = () => {
-  
-  const [ showMenu, setShowMenu ] = React.useState(false);
+const App = (props) => {
 
   return (
     <div className="App">
       <Router>
-        <Nav showMenu={showMenu} setMenu={setShowMenu}/>
-        <Menu showMenu={showMenu} setMenu={setShowMenu}/>
         <Switch>
-          <Route exact path={routes.HOME} > < Home /> </Route>
-          <Route exact path={routes.STORE} > < Store /> </Route>
-          <Route exact path={routes.STORE + '/:id' } > < Producto /> </Route>
-          <Route exact path={routes.ABOUT} > < About /> </Route>
-          <Route exact path={routes.CONTACT} > < Contacto /> </Route>
-          <Route exact path={routes.CARRO} > < Carro /> </Route>
+          <RedirectRoute exact isAuthenticated={true} component={Login} path={routes.LOGIN} />
+          <RedirectRoute exact isAuthenticated={true} component={Register} path={routes.REGISTER} />
+          <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Home} path={routes.HOME} />
+          <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={About} path={routes.ABOUT} />
+          <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Contacto} path={routes.CONTACT} />
+          <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Store} path={routes.STORE} />
+          <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Carro} path={routes.CARRO} />
+          <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Producto} path={routes.STORE + '/:id'} />
         </Switch>
       </Router>
     </div>
