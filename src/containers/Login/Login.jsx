@@ -19,7 +19,7 @@ const Login = props => {
         setErrorEmail(null);
         e.preventDefault();
         try {
-            await signIn(email, password);
+            const logedUser = await signIn(email, password);
             history.push(Routes.HOME);
         } catch (error) {
             setErrorEmail("Correo y/o contraseña incorrectos.");
