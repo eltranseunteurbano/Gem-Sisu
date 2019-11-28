@@ -56,9 +56,9 @@ const Register = (props) => {
                     <Input title="Email" value={email} onHandleChange={setEmail} type={"email"} error={errorEmail} required={true} />
                     <Input title="Password" value={password} onHandleChange={setPassword} type={"password"} error={errorPassword} required={true} />
                     <Input title="Confirm Password" value={confirmPassword} onHandleChange={setConfirmPassword} type={"password"} error={errorConfirmPassword} required={true} />
-                    <input type="submit" value="Sign Up" />
+                    <input className="btn" type="submit" value="Sign Up" />
                 </form>
-                <p>Do you already have an account?<a href={Routes.LOGIN}>Log In</a></p>
+                <p className="letter">Do you already have an account?<a href={Routes.LOGIN}> Log In</a></p>
             </div>
             <div className="fondo">
                 <img src={img2} alt="" className="img" />

@@ -7,14 +7,14 @@
     align-items: flex-start;
 
     &--title{
-        padding: 0.5em;
+        margin-top: 10%;
         color: $yellow;
     }
 
     &--body {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
+        width: 115%;
+        padding: 1em;
+        margin: auto;
         box-sizing: border-box;
         border: none;
         border-bottom: 2px solid $yellow;
@@ -29,7 +29,19 @@
             
         }
     }
+
     &--footer {
-        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__error{
+            margin: auto;
+            padding: 0.5em;
+            text-align: center;
+            font-style: italic;
+            color: red;
+        }
     }
 }

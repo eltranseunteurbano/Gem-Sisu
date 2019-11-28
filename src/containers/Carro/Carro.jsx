@@ -22,8 +22,8 @@ const Carro = () => {
                     <article className="Carro__content__items">
                         <div className="Carro__content__items__item">
                             <div className="Carro__content__items__item__nombre">
-                                <img src={process.env.PUBLIC_URL + '/img/productos/pikachu.png'} alt="Imagen producto" />
-                                <p> Nombre Producto</p>
+                                <img src={process.env.PUBLIC_URL + '/img/productos/2.jpg'} alt="Imagen producto" className="Carro__content__items__item__img" />
+                                <p> Boina Inglesa Negra</p>
                             </div>
                             <input className="Carro__content__items__item__cantidad" type="number" placeholder="0" min={0} />
                             <p className="Carro__content__items__item__precio">$ 20000</p>
@@ -32,8 +32,8 @@ const Carro = () => {
 
                         <div className="Carro__content__items__item">
                             <div className="Carro__content__items__item__nombre">
-                                <img src={process.env.PUBLIC_URL + '/img/productos/pikachu.png'} alt="Imagen producto" />
-                                <p> Nombre Producto</p>
+                                <img src={process.env.PUBLIC_URL + '/img/productos/1.jpg'} alt="Imagen producto" className="Carro__content__items__item__img" />
+                                <p> Gafas Retro Vintage</p>
                             </div>
                             <input className="Carro__content__items__item__cantidad" type="number" placeholder="0" min={0} />
                             <p className="Carro__content__items__item__precio">$ 20000</p>
@@ -42,23 +42,15 @@ const Carro = () => {
 
                         <div className="Carro__content__items__item">
                             <div className="Carro__content__items__item__nombre">
-                                <img src={process.env.PUBLIC_URL + '/img/productos/pikachu.png'} alt="Imagen producto" />
-                                <p> Nombre Producto</p>
+                                <img src={process.env.PUBLIC_URL + '/img/productos/4.jpg'} alt="Imagen producto" className="Carro__content__items__item__img" />
+                                <p> Aretes Geométricos </p>
                             </div>
                             <input className="Carro__content__items__item__cantidad" type="number" placeholder="0" min={0} />
                             <p className="Carro__content__items__item__precio">$ 20000</p>
                             <p className="Carro__content__items__item__eliminar">X</p>
                         </div>
 
-                        <div className="Carro__content__items__item">
-                            <div className="Carro__content__items__item__nombre">
-                                <img src={process.env.PUBLIC_URL + '/img/productos/pikachu.png'} alt="Imagen producto" />
-                                <p> Nombre Producto</p>
-                            </div>
-                            <input className="Carro__content__items__item__cantidad" type="number" placeholder="0" min={0} />
-                            <p className="Carro__content__items__item__precio">$ 20000</p>
-                            <p className="Carro__content__items__item__eliminar">X</p>
-                        </div>
+             
                     </article>
                 </section>
 

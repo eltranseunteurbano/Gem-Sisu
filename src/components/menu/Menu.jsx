@@ -29,8 +29,8 @@ const Menu = (props) => {
                 <button type="button" onClick={() => goPage(Routes.ABOUT)} className="Menu__items__item">About</button>
                 <button type="button" onClick={() => goPage(Routes.STORE)} className="Menu__items__item">Store</button>
                 <button type="button" onClick={() => goPage(Routes.CONTACT)} className="Menu__items__item">Contact</button>
-                <hr />
-                <button type="button" onClick={onSignOut} className="Menu__items__item">Log Out</button>
+                <hr className="line"/>
+                <button type="button" onClick={onSignOut} className="Menu__items__itemlog">Log Out</button>
             </div>
         </section>
     )

@@ -11,37 +11,19 @@ const Store = () => {
         {
             "id": 1,
             "nombre": "Producto 1",
-            "img": "/img/productos/pikachu.png",
+            "img": "/img/productos/4.jpg",
             "precio": 200000,
             "likes": 15
         }, {
             "id": 2,
             "nombre": "Producto 2",
-            "img": "/img/productos/pikachu.png",
+            "img": "/img/productos/4.jpg",
             "precio": 200000,
             "likes": 15
         }, {
             "id": 3,
             "nombre": "Producto 3",
-            "img": "/img/productos/pikachu.png",
-            "precio": 200000,
-            "likes": 15
-        }, {
-            "id": 4,
-            "nombre": "Producto 4",
-            "img": "/img/productos/pikachu.png",
-            "precio": 200000,
-            "likes": 15
-        }, {
-            "id": 5,
-            "nombre": "Producto 5",
-            "img": "/img/productos/pikachu.png",
-            "precio": 200000,
-            "likes": 15
-        }, {
-            "id": 6,
-            "nombre": "Producto 6",
-            "img": "/img/productos/pikachu.png",
+            "img": "/img/productos/4.jpg",
             "precio": 200000,
             "likes": 15
         }
@@ -49,21 +31,45 @@ const Store = () => {
 
     const bracelets = [
         {
-            "id": 1,
-            "nombre": "Producto 20",
-            "img": "/img/productos/pikachu.png",
+            "id": 4,
+            "nombre": "Producto 1",
+            "img": "/img/productos/1.jpg",
             "precio": 200000,
-            "likes": 10
+            "likes": 15
+        }, {
+            "id": 5,
+            "nombre": "Producto 2",
+            "img": "/img/productos/1.jpg",
+            "precio": 200000,
+            "likes": 15
+        }, {
+            "id": 6,
+            "nombre": "Producto 3",
+            "img": "/img/productos/1.jpg",
+            "precio": 200000,
+            "likes": 15
         }
     ];
 
     const keychains = [
         {
-            "id": 1,
-            "nombre": "Producto 15",
-            "img": "/img/productos/pikachu.png",
+            "id": 7,
+            "nombre": "Producto 1",
+            "img": "/img/productos/2.jpg",
             "precio": 200000,
-            "likes": 5
+            "likes": 15
+        }, {
+            "id": 8,
+            "nombre": "Producto 2",
+            "img": "/img/productos/2.jpg",
+            "precio": 200000,
+            "likes": 15
+        }, {
+            "id": 9,
+            "nombre": "Producto 3",
+            "img": "/img/productos/2.jpg",
+            "precio": 200000,
+            "likes": 15
         }
     ];
 

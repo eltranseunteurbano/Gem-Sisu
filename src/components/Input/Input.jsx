@@ -16,8 +16,8 @@ function Input(props) {
                 {
                     props.type === "email" && <input required={props.required} className="Input--body Input--body__email" type={props.type} value={props.value} onChange={e => props.onHandleChange(e.target.value)} />
                 }
-            <div className="Input--footer__line">
-                {props.error && <p>{props.error}</p>}
+            <div className="Input--footer">
+                {props.error && <p className="Input--footer__error">{props.error}</p>}
             </div>
         </div>
     );

@@ -6,7 +6,6 @@ import img1 from '../../assets/images/1.jpg';
 import * as Routes from '../../constants/Routes';
 import { useHistory } from 'react-router-dom';
 
-
 const Login = props => {
 
     const [email, setEmail] = useState("");
@@ -36,9 +35,9 @@ const Login = props => {
                 <form onSubmit={onHandleSubmit}>
                     <Input title="Email" value={email} onHandleChange={setEmail} type={"email"} error={errorEmail} />
                     <Input title="Password" value={password} onHandleChange={setPassword} type={"password"} />
-                    <input type="submit" value="Log In" />
+                    <input className="btn" type="submit" value="Log In" />
                 </form>
-                <p>You don't have an account yet! <a href={Routes.REGISTER}>Sign up</a></p>
+                <p className="letter">You don't have an account yet! <a href={Routes.REGISTER}> Sign up</a></p>
             </div>
         </div>
     );

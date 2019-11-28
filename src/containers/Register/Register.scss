@@ -1,0 +1,22 @@
+@import "../../styles/colors.scss";
+
+.btn{
+    width: 100%;
+    margin: 1em;
+    padding: 0.5em;
+    border: 2px solid $yellow;
+    background: $yellow;
+    color: white;
+    font-weight: bolder;
+
+    &:hover{
+        background: $white;
+        color: $yellow;
+    }
+}
+
+.letter{
+    margin-top: 1.5em;
+    font-size: 14px;
+    font-style: italic;
+}

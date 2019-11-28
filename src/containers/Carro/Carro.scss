@@ -1,9 +1,8 @@
 @import '../../styles/colors.scss';
 
 .Carro{
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -11,6 +10,7 @@
     align-content: stretch;
     align-items: center;
     padding-top: 50px;
+    overflow: hidden;
 
     &__titulo{
         width: 100%;
@@ -48,6 +48,7 @@
 
         &__items{
             width: 100%;
+
             &__item{
                 display: flex;
                 flex-direction: row;
@@ -76,11 +77,13 @@
                     flex-direction: row;
                     flex-wrap: nowrap;
                     justify-content: center;
-                    align-content: stretch;
                     align-items: center;
+                    align-content: stretch;
 
                     img{
                         width: 40%;
+                        padding: 1em;
+                        margin: 0;
                     }
                 }
             }

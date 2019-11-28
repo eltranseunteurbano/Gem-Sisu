@@ -21,7 +21,7 @@ const Home = () => {
                     </div>
                 </article>
                 <article className="Home__yellow">
-                    <h1 className="Home__yellow__title">Un gran <strong>texto</strong> aquí <br /> en web</h1>
+                    <h1 className="Home__yellow__title">El aire de la <strong>naturaleza</strong> y <br /> las gemas preciosas.</h1>
                 </article>
 
                 <article className="Home__img">

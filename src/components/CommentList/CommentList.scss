@@ -1,0 +1,69 @@
+@import '../../styles/colors.scss';
+
+.Comentario{
+    width: 85%;
+    min-height: 200px;
+    padding: 1em 2.5em 1em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    background:$yellow;
+    
+    
+    &__nombre{
+        font-weight: bold;
+        padding: 2px;
+        font-size: 18px;
+        color: white;
+    }
+    
+    &__desc{
+        width: 100%;
+        padding: 2px;
+        text-align: justify;
+        margin-bottom: 15px;
+        letter-spacing: 1pt;
+        line-height: 21px;
+        color: white;
+    }
+    
+    
+    &__user{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+        &__comentarios{
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            color: $blue;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        &__likes{
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            
+            &__icon{
+                color: red;
+            }
+            
+            &__num{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+

@@ -5,3 +5,4 @@ export const CONTACT = '/contact';
 export const CARRO = '/checkout';
 export const LOGIN = '/login';
 export const REGISTER = '/register';
+export const COMMENTS = '/comments';

@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import * as myRoutes from '../../constants/Routes';
 
-const RedirectRoute = ({ component: Component, isAuthenticated, noAuthRoute = myRoutes.LOGIN, ...rest }) => {
+const RedirectRoute = ({ component: Component, isAuthenticated, ...rest }) => {
 
     return (
         <Route
@@ -13,7 +13,7 @@ const RedirectRoute = ({ component: Component, isAuthenticated, noAuthRoute = my
                 ) : (
                         <Redirect
                             to={{
-                                pathname: noAuthRoute,
+                                pathname: myRoutes.LOGIN,
                                 state: {
                                     from: props.location
                                 }

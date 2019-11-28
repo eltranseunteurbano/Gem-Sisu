@@ -7,15 +7,16 @@ import * as routes from './constants/Routes';
 
 import Producto from './containers/Producto/Producto';
 
-import Home from './containers/home/Home';
+import Home from './containers/Home/Home';
 import Store from './containers/Store/Store';
 import About from './containers/About/About';
-import Contacto from './containers/contacto/Contacto';
+import Contacto from './containers/Contacto/Contacto';
 import Carro from './containers/Carro/Carro';
 import Register from './containers/Register/Register';
 import Login from './containers/Login/Login';
 import { userIsAuthenticated } from './services/firebaseService';
 import RedirectRoute from './components/RedirectRoute/RedirectRoute';
+import Comments from './containers/Comments/Comments';
 
 const App = (props) => {
 
@@ -31,6 +32,8 @@ const App = (props) => {
           <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Store} path={routes.STORE} />
           <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Carro} path={routes.CARRO} />
           <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Producto} path={routes.STORE + '/:id'} />
+          <RedirectRoute exact isAuthenticated={userIsAuthenticated()} component={Comments} path={routes.COMMENTS} />
+
         </Switch>
       </Router>
     </div>
