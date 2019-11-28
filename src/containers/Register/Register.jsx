@@ -20,7 +20,7 @@ const Register = (props) => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errorConfirmPassword, setErrorConfirmPassword] = useState(null);
 
-    let history = useHistory();
+    const history = useHistory();
 
     const onHandleSubmit = async (e) => {
         e.preventDefault();
@@ -31,11 +31,13 @@ const Register = (props) => {
         } else {
             try {
                 const userCreated = await createUser(username, email, password);
-                const currentUser = await signIn(email, password);
-                
                 history.push(Routes.HOME);
             } catch (error) {
-                setErrorEmail("El correo ya se encuentra registrado.");
+                if (error.code === "auth/email-already-exists") {
+                    setErrorEmail("El correo ya se encuentra registrado.");
+                } else {
+                    setErrorEmail(error.message);
+                }
             }
         }
     };

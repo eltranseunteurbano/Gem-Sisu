@@ -3,7 +3,6 @@
 
 .Comentarios{
     width: 100vw;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,8 +10,8 @@
     
     &__dentro{
         width: 35%;
-        height: 470px;
         display: flex;
+        max-height: 60vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;

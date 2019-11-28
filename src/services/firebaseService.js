@@ -4,10 +4,10 @@ import firebaseConfig from '../assets/credentials/firebaseConfig';
 import axios from 'axios';
 firebase.initializeApp(firebaseConfig);
 
-const USER_STORAGE_KEY = "user";
+const USER_STORAGE_KEY = "userObject";
 
-// const URL_HELLOWORLD = "https://us-central1-gemsisu.cloudfunctions.net/api";
-const URL_USER = "https://us-central1-gemsisu.cloudfunctions.net/api/users";
+const URL_USER = "https://gemsisu.herokuapp.com/users";
+const URL_COMMENTS = "https://gemsisu.herokuapp.com/comments";
 
 export const signIn = (email, password) => {
     return new Promise((resolve, reject) => {
@@ -25,17 +25,47 @@ export const signIn = (email, password) => {
     });
 };
 
-export const createUser = async (displayName, email, password) => {
-    const response = await axios.post(URL_USER, { displayName, email, password }, { headers: { 'Content-Type': 'application/json' } });
-    return response;
+export const createUser = (displayName, email, password) => {
+    return new Promise((resolve, reject) => {
+        axios.post(URL_USER, { displayName, email, password }, { headers: { 'Content-Type': 'application/json' } })
+            .then((response) => {
+                localStorage.removeItem(USER_STORAGE_KEY);
+                localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(response.data));
+                resolve(response.data);
+            }, (error) => {
+                reject(JSON.parse(error.request.response));
+            });
+    });
 };
+
+export const getComments = () => {
+    return new Promise((resolve, reject) => {
+        axios.get(URL_COMMENTS)
+            .then((response) => {
+                resolve(response.data);
+            }, (error) => {
+                reject(JSON.parse(error.request.response));
+            });
+    });
+};
+
+export const makeComment = (name, date, comment) => {
+    return new Promise((resolve, reject) => {
+        axios.post(URL_COMMENTS, { name, date, comment }, { headers: { 'Content-Type': 'application/json' } })
+            .then((response) => {
+                resolve(response.data);
+            }, (error) => {
+                reject(JSON.parse(error.request.response));
+            });
+    });
+}
 
 export const signOut = () => {
     localStorage.removeItem(USER_STORAGE_KEY);
 };
 
-export const userIsAuthenticated = () => {
-    return localStorage.getItem(USER_STORAGE_KEY) ? JSON.parse(localStorage.getItem(USER_STORAGE_KEY)) : null;
+export const isUserAuthenticated = () => {
+    return localStorage.getItem(USER_STORAGE_KEY) !== null ? true : false;
 };
 
 export const getUser = () => {

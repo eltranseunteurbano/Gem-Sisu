@@ -15,7 +15,6 @@ const Producto = (props) => {
 
         var arreglo = localStorage.getItem('compras');
         arreglo = JSON.parse(arreglo);
-        console.log(arreglo.length);
     }
 
     const HandleClick = () => {

@@ -8,9 +8,8 @@ function CommentList(props) {
 
     return (
         <div className="Comentario">
-            <p className="Comentario__nombre">Nombre del usuario</p>
-            <p className="Comentario__desc">Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim, pellentesque vehicula sed sem lacinia porta nisi, nascetur placerat varius mus lacus himenaeos congue.</p>
-
+            <p className="Comentario__nombre">{props.name + " (" + props.date + ")"}</p>
+            <p className="Comentario__desc">{props.comment}</p>
             <div className="Comentario__user">
                 <div className="Comentario__user__comentarios">
                     <p className="Comentario__user__comentario">Responder</p>
